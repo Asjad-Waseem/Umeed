@@ -1,0 +1,10 @@
+@import '~antd/dist/antd.css';
+
+[data-theme='compact'] .ant-drawer-body p {
+    margin-bottom: 0px;
+  }
+
+  .ant-btn-primary {
+    background-color: palevioletred;
+  }
+
