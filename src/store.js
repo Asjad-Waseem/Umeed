@@ -10,7 +10,8 @@ const middleware = [thunk];
 
 // const store = createStore(authReducer, compose(applyMiddleware(...middleware), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
 // COMMENTED LINE export const store = createStore(rootReducer, initialState, compose(applyMiddleware(...middleware) , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
-export const store = createStore(rootReducer, initialState, compose(applyMiddleware(...middleware) , window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__()));
+export const store = createStore(rootReducer, initialState, composeEnhancers(applyMiddleware(...middleware));
+export const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 // const store = createStore(userReducer, compose(applyMiddleware(...middleware), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
 // console.log(store.getState());
 
